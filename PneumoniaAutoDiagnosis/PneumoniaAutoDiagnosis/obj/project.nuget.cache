@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "/0qG7E6e9ba+BlfS757rLOv43PHxFfHdZEV/B6XSBFL2LJQTAv64sl3DFM8jqVJTorLOQ6SoVsdvGk4MkpFEtg==",
+  "success": true,
+  "projectFilePath": "C:\\Work\\PneumoniaAutoDiagnosis\\PneumoniaAutoDiagnosis\\PneumoniaAutoDiagnosis\\PneumoniaAutoDiagnosis.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Raushaniia\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
+    "C:\\Users\\Raushaniia\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
+    "C:\\Users\\Raushaniia\\.nuget\\packages\\system.drawing.common\\5.0.0\\system.drawing.common.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
