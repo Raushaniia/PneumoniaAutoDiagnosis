@@ -36,6 +36,8 @@ namespace PneumoniaAutoDiagnosis
 				sp.GetRequiredService<IOptions<DiagnosesDbDatabaseSettings>>().Value);
 
 			services.AddSingleton<PatientService>();
+
+			services.AddControllers();
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -50,10 +52,7 @@ namespace PneumoniaAutoDiagnosis
 
 			app.UseEndpoints(endpoints =>
 			{
-				endpoints.MapGet("/", async context =>
-				{
-					await context.Response.WriteAsync("Hello World new!");
-				});
+				endpoints.MapControllers();
 			});
 		}
 	}

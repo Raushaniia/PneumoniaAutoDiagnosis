@@ -12,7 +12,7 @@ namespace PneumoniaAutoDiagnosis.Services
 	{
 		public IMongoCollection<Patient> _patients;
 
-		public PatientService(DiagnosesDbDatabaseSettings settings)
+		public PatientService(IDiagnosesDbDatabaseSettings settings)
 		{
 			var client = new MongoClient(settings.ConnectionString);
 			var database = client.GetDatabase(settings.DatabaseName);
@@ -21,15 +21,15 @@ namespace PneumoniaAutoDiagnosis.Services
 		}
 
 		public List<Patient> Get() => _patients.Find(p => true).ToList();
-		public Patient Get(long patientId) => _patients.Find(p => p.Id == patientId).FirstOrDefault();
+		public Patient Get(string patientId) => _patients.Find(p => p.Id == patientId).FirstOrDefault();
 		public void Create(Patient patient)
 		{
 			_patients.InsertOne(patient);
 		}
-		public void Delete(long patientId)
+		public void Delete(string patientId)
 		{
 			_patients.DeleteOne(p => p.Id == patientId);
 		}
-		public void Update(long id, Patient patientUpdated) => _patients.ReplaceOne(p => p.Id == id, patientUpdated);
+		public void Update(string id, Patient patientUpdated) => _patients.ReplaceOne(p => p.Id == id, patientUpdated);
 	}
 }
