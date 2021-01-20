@@ -1,23 +1,18 @@
 ﻿using MongoDB.Driver;
 using PneumoniaAutoDiagnosis.DAL;
 using PneumoniaAutoDiagnosis.Models;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace PneumoniaAutoDiagnosis.Services
 {
-	public class PatientService
+	public class PatientService : BaseDatabaseService
 	{
 		public IMongoCollection<Patient> _patients;
 
-		public PatientService(IDiagnosesDbDatabaseSettings settings)
+		public PatientService(IDiagnosesDbDatabaseSettings settings) : base(settings)
 		{
-			var client = new MongoClient(settings.ConnectionString);
-			var database = client.GetDatabase(settings.DatabaseName);
-
-			_patients = database.GetCollection<Patient>(settings.PatientsCollectionName);
+			_patients = Database.GetCollection<Patient>(settings.PatientsCollectionName);
 		}
 
 		public List<Patient> Get() => _patients.Find(p => true).ToList();

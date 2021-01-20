@@ -35,7 +35,13 @@ namespace PneumoniaAutoDiagnosis
 			services.AddSingleton<IDiagnosesDbDatabaseSettings>(sp =>
 				sp.GetRequiredService<IOptions<DiagnosesDbDatabaseSettings>>().Value);
 
+			services.AddSingleton<BaseDatabaseService>();
+
 			services.AddSingleton<PatientService>();
+
+			services.AddSingleton<PatientCardService>();
+
+			services.AddSingleton<UserService>();
 
 			services.AddControllers();
 		}

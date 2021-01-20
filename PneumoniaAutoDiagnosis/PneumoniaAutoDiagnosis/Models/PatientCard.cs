@@ -8,8 +8,9 @@ namespace PneumoniaAutoDiagnosis.Models
 	{
 		[BsonId]
 		[BsonRepresentation(BsonType.ObjectId)]
-		private long Id { get; set; }
-		public long PatientId { get; set; }
+		public string Id { get; set; }
+		[BsonRepresentation(BsonType.ObjectId)]
+		public string PatientId { get; set; }
 		public Image XRayImage { get; set; }
 		public string Details { get; set; }
 	}

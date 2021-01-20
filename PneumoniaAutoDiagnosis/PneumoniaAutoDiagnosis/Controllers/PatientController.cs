@@ -1,10 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using PneumoniaAutoDiagnosis.Models;
 using PneumoniaAutoDiagnosis.Services;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace PneumoniaAutoDiagnosis.Controllers
 {

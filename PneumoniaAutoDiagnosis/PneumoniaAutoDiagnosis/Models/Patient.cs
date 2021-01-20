@@ -1,5 +1,6 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
+using PneumoniaAutoDiagnosis.Enums;
 using System;
 
 namespace PneumoniaAutoDiagnosis.Models
@@ -11,6 +12,6 @@ namespace PneumoniaAutoDiagnosis.Models
 		public string Id { get; set; }
 		public string Name { get; set; }
 		public DateTime DateOfBirth { get; set; }
-		public enum DiagnosisStatus { Negative, Positive, InProgress}
+		public DiagnosisStatus Status { get; set; }
 	}
 }
