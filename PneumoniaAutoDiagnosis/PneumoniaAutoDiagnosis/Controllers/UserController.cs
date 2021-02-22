@@ -2,6 +2,7 @@
 using PneumoniaAutoDiagnosis.Models;
 using PneumoniaAutoDiagnosis.Services;
 using System.Collections.Generic;
+using Microsoft.AspNetCore.Identity;
 
 namespace PneumoniaAutoDiagnosis.Controllers
 {
@@ -35,9 +36,9 @@ namespace PneumoniaAutoDiagnosis.Controllers
 		[HttpPost]
 		public ActionResult<User> Create(User User)
 		{
-			_userService.Create(User);
+			_userService.CreateAsync(User);
 
-			return CreatedAtRoute("GetBook", new { id = User.Id.ToString() }, User);
+			return User;
 		}
 
 		[HttpPut("{id:length(24)}")]

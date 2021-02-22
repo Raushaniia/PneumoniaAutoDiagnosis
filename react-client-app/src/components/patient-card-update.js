@@ -39,7 +39,7 @@ class PatientCardUpdate extends Component {
             <div class="col-2"></div>
             <div class="col-8">
               <center>
-                <h1 class="h3 mb-3 fw-normal">Add patient:</h1>
+                <h1 class="h3 mb-3 fw-normal">Update patient:</h1>
               </center>
             </div>
             <div class="col-2"></div>

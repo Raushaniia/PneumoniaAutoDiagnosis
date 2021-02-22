@@ -16,7 +16,7 @@ namespace PneumoniaAutoDiagnosis.Controllers
 			_patientService = patientService;
 		}
 
-        [HttpGet]
+        [HttpGet(Name = "Get")]
         public ActionResult<List<Patient>> Get() => _patientService.Get();
 
         [HttpGet("{id:length(24)}", Name = "GetPatient")]
@@ -37,7 +37,7 @@ namespace PneumoniaAutoDiagnosis.Controllers
         {
             _patientService.Create(patient);
 
-            return CreatedAtRoute("GetBook", new { id = patient.Id.ToString() }, patient);
+            return RedirectToAction("Get", "PatientController");
         }
 
         [HttpPut("{id:length(24)}")]

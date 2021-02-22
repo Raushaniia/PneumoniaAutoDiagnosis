@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ZsoLRuU1vaB/Y1LjyRsT4Eh842G/wClgOayZF1cR8X0t45Kvggxhakb6pXNOF8yAbTlYDM85INBQHAA63O5xPg==",
+  "dgSpecHash": "3Wnpevm6oao+wf7Izx8A4hDI4ttHbTTUgb0KamuZ34gU5PStPFUdVPlV5kPcVhh3c5Algq4sk8lYH9uUCQlkfA==",
   "success": true,
   "projectFilePath": "C:\\Work\\PneumoniaAutoDiagnosis\\PneumoniaAutoDiagnosis\\PneumoniaAutoDiagnosis\\PneumoniaAutoDiagnosis.csproj",
   "expectedPackageFiles": [
@@ -13,7 +13,7 @@
     "C:\\Users\\Raushaniia\\.nuget\\packages\\javascriptengineswitcher.core\\3.1.0\\javascriptengineswitcher.core.3.1.0.nupkg.sha512",
     "C:\\Users\\Raushaniia\\.nuget\\packages\\jspool\\4.0.0\\jspool.4.0.0.nupkg.sha512",
     "C:\\Users\\Raushaniia\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.0\\microsoft.aspnetcore.authentication.jwtbearer.5.0.0.nupkg.sha512",
-    "C:\\Users\\Raushaniia\\.nuget\\packages\\microsoft.aspnetcore.authentication.openidconnect\\5.0.2\\microsoft.aspnetcore.authentication.openidconnect.5.0.2.nupkg.sha512",
+    "C:\\Users\\Raushaniia\\.nuget\\packages\\microsoft.aspnetcore.authentication.openidconnect\\5.0.0\\microsoft.aspnetcore.authentication.openidconnect.5.0.0.nupkg.sha512",
     "C:\\Users\\Raushaniia\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.0.0\\microsoft.bcl.asyncinterfaces.1.0.0.nupkg.sha512",
     "C:\\Users\\Raushaniia\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Raushaniia\\.nuget\\packages\\microsoft.dotnet.platformabstractions\\2.1.0\\microsoft.dotnet.platformabstractions.2.1.0.nupkg.sha512",
