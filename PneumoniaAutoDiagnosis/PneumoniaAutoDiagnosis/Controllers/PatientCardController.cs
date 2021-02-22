@@ -37,7 +37,7 @@ namespace PneumoniaAutoDiagnosis.Controllers
         {
             _patientCardService.Create(PatientCard);
 
-            return CreatedAtRoute("GetBook", new { id = PatientCard.Id.ToString() }, PatientCard);
+            return CreatedAtRoute("Get", new { id = PatientCard.Id.ToString() }, PatientCard);
         }
 
         [HttpPut("{id:length(24)}")]

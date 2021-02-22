@@ -21,10 +21,12 @@ namespace PneumoniaAutoDiagnosis.Services
 		{
 			_patientCard.InsertOne(patientCard);
 		}
+
 		public void Delete(string patientCardId)
 		{
 			_patientCard.DeleteOne(p => p.Id == patientCardId);
 		}
+
 		public void Update(string id, PatientCard patientCardUpdated) => _patientCard.ReplaceOne(p => p.Id == id, patientCardUpdated);
 	}
 }

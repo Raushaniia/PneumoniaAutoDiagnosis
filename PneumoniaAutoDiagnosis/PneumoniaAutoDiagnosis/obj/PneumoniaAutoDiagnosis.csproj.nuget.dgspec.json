@@ -43,9 +43,21 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.OpenIdConnect": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            },
+            "Microsoft.Identity.Web": {
+              "target": "Package",
+              "version": "[1.5.1, )"
+            },
             "MongoDB.Driver": {
               "target": "Package",
               "version": "[2.11.5, )"
+            },
+            "React.AspNet": {
+              "target": "Package",
+              "version": "[5.2.11, )"
             },
             "System.Drawing.Common": {
               "target": "Package",

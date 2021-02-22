@@ -41,16 +41,16 @@ namespace PneumoniaAutoDiagnosis.Controllers
         }
 
         [HttpPut("{id:length(24)}")]
-        public IActionResult Update(string id, Patient bookIn)
+        public IActionResult Update(string id, [FromBody] Patient patient)
         {
-            var patient = _patientService.Get(id);
+            var patientFromDb = _patientService.Get(id);
 
-            if (patient == null)
+            if (patientFromDb == null)
             {
                 return NotFound();
             }
 
-            _patientService.Update(id, bookIn);
+            _patientService.Update(id, patient);
 
             return NoContent();
         }
