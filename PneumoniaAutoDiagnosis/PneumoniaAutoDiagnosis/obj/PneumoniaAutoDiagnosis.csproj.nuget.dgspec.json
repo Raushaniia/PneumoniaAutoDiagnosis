@@ -43,9 +43,13 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.AzureAD.UI": {
+              "target": "Package",
+              "version": "[5.0.3, )"
+            },
             "Microsoft.Identity.Web": {
               "target": "Package",
-              "version": "[1.5.1, )"
+              "version": "[1.7.0, )"
             },
             "MongoDB.Driver": {
               "target": "Package",

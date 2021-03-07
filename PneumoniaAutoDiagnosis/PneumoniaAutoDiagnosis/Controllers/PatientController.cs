@@ -2,10 +2,12 @@
 using PneumoniaAutoDiagnosis.Models;
 using PneumoniaAutoDiagnosis.Services;
 using System.Collections.Generic;
+using Microsoft.AspNetCore.Authorization;
 
 namespace PneumoniaAutoDiagnosis.Controllers
 {
-	[Route("api/[controller]")]
+	[Authorize]
+    [Route("api/[controller]")]
 	[ApiController]
 	public class PatientController : ControllerBase
 	{

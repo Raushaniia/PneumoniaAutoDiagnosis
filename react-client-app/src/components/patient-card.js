@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { authProvider } from "./../auth/authProvider";
 const ReactDOM = require('react-dom');
 const Route = require('react-router-dom').Route;
 const BrowserRouter = require('react-router-dom').BrowserRouter;
@@ -110,15 +111,22 @@ function addPatient(newName, newDateOfBirh, status) {
     DateOfBirth: new Date(),
     Status: status,
   };
-  fetch("https://localhost:44399/api/patient/", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(patient),
-  })
+  var d = authProvider.getAccessToken().catch(console.log);
+  authProvider.getAccessToken().then(res => 
+    fetch("https://localhost:44399/api/patient/" ,
+    {
+      method: "POST",
+      headers: 
+      { 
+        "Content-Type": "application/json",
+        'Authorization': `Bearer ${res.accessToken}`, 
+       },
+       body: JSON.stringify(patient),
+    }
+    ))
     
     .catch(console.log);
+
 }
 
 export default PatientCard;

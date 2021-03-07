@@ -1,0 +1,55 @@
+"AzureAd": {
+    "Instance": "https://login.microsoftonline.com/",
+    "Domain": "domainpad.onmicrosoft.com",
+    "ClientId": "bdedf839-fb9e-4276-8f4d-6608468c1fa6",
+    "TenantId": "e9e18706-7eba-446b-a3df-e1bde79cf7c0",
+    "CallbackPath": "/auth-response"
+  },
+
+
+ "AzureAd": {
+    "Instance": "https://login.microsoftonline.com/",
+    "Domain": "https://login.microsoftonline.com/common",
+    "ClientId": "cb80bbed-c801-48d8-a737-eff9d16888e8",
+    "TenantId": "e9e18706-7eba-446b-a3df-e1bde79cf7c0",
+    "CallbackPath": "/auth-response"
+  },
+
+
+https://login.microsoftonline.com/common/oauth2/v2.0/authorize?response_type=id_token&scope=https%3A%2F%2Fpadorganization.onmicrosoft.com%2Fpad openid profile&client_id=bdedf839-fb9e-4276-8f4d-6608468c1fa6&redirect_uri=<OPTIONAL REDIRECT URI>&state=eyJpZCI6Ijc1ZjZkYTM4LTkyNDktNGNmMi05NjIzLTVjMzlkMDJmZTZhMiIsInRzIjoxNjE1MDM0MTg0LCJtZXRob2QiOiJwb3B1cEludGVyYWN0aW9uIn0%3D&nonce=2b265499-bd1e-4a36-8c42-b0aea204a83b&client_info=1&x-client-SKU=MSAL.JS&x-client-Ver=msal&client-request-id=068e9856-1718-4af5-9010-46b908251135&response_mode=fragment
+
+
+
+https://contosob2c.b2clogin.com/contosob2c.onmicrosoft.com/oauth2/v2.0/authorize?
+client_id=2d4d11a2-f814-46a7-890a-274a72a7309e      // Your registered Application ID
+&redirect_uri=https%3A%2F%2Flocalhost%3A44321%2F    // Your registered Reply URL, url encoded
+&response_mode=form_post                            // 'query', 'form_post' or 'fragment'
+&response_type=id_token
+&scope=openid
+&nonce=dummy
+&state=12345                                        // Any value provided by your application
+&p=b2c_1_siup                                       // Your sign-up user flow
+
+
+https://domainpad.b2clogin.com/domainpad.onmicrosoft.com/common/oauth2/v2.0
+
+,
+        this.setState({ 
+        
+        token: res.accessToken })
+
+
+e9e18706-7eba-446b-a3df-e1bde79cf7c0
+
+https://www.npmjs.com/package/react-aad-msal
+
+https://docs.microsoft.com/ru-ru/azure/active-directory/develop/quickstart-v2-aspnet-core-webapp
+
+
+https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationMenuBlade/Authentication/appId/bdedf839-fb9e-4276-8f4d-6608468c1fa6/isMSAApp/
+
+https://www.onesixsolutions.com/blog/app-modernization/how-to-integrate-azure-ad-into-your-web-application/
+
+
+https://github.com/syncweek-react-aad/react-aad#checkeredflag-getting-started
+

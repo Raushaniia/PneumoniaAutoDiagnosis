@@ -1,7 +1,11 @@
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.AzureAD.UI;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -28,16 +32,17 @@ namespace PneumoniaAutoDiagnosis
 		// For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
 		public void ConfigureServices(IServiceCollection services)
 		{
-			//services.AddAuthentication(OpenIdConnectDefaults.AuthenticationScheme)
-			//	.AddMicrosoftIdentityWebApp(Configuration.GetSection("AzureAd"));
+			services.AddAuthentication(options =>
+			{
+				options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+				options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
 
-			//services.AddControllersWithViews(options =>
-			//{
-			//	var policy = new AuthorizationPolicyBuilder()
-			//		.RequireAuthenticatedUser()
-			//		.Build();
-			//	options.Filters.Add(new AuthorizeFilter(policy));
-			//});
+			}).AddJwtBearer(options =>
+			{
+				options.Authority = "https://login.microsoftonline.com/e9e18706-7eba-446b-a3df-e1bde79cf7c0/v2.0";
+				//options.RequireHttpsMetadata = false;
+				options.Audience = "bdedf839-fb9e-4276-8f4d-6608468c1fa6";
+			});
 
 			services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
 			{
@@ -74,8 +79,8 @@ namespace PneumoniaAutoDiagnosis
 			app.UseRouting();
 
 			app.UseCors("MyPolicy");
-			//app.UseAuthentication();
-			//app.UseAuthorization();
+			app.UseAuthentication();
+			app.UseAuthorization();
 
 
 

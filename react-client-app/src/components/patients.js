@@ -3,6 +3,10 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import PatientCard from "./patient-card";
 import PatientCardUpdate from "./patient-card-update";
 import { useHistory } from "react-router-dom"; 
+import {createAuthProvider} from 'react-token-auth';
+import { authProvider } from "./../auth/authProvider";
+
+
 const BrowserRouter = require('react-router-dom').BrowserRouter;
 const hashHistory = require('react-router-dom').hashHistory;
 const ReactDOM = require('react-dom');
@@ -20,7 +24,22 @@ function setPatient(id, name, date, status) {
 }
 
 function deletePatient(id) {
-    fetch("https://localhost:44399/api/patient/" + id, { method: "DELETE" })
+  authProvider.getAccessToken().then(res => 
+    //console.log(res.accessToken))
+    fetch("https://localhost:44399/api/patient/" + id,
+    {
+      method: "DELETE",
+      headers: 
+      { 
+        'Authorization': `Bearer ${res.accessToken}`, 
+        //'Accept': 'application/json',
+       }
+    }
+    ))
+    /*fetch("https://localhost:44399/api/patient/" + id, 
+    { 
+      method: "DELETE" 
+    })*/
       .then((res) => res.json())
       .then((data) => {
         this.setState({
@@ -29,18 +48,29 @@ function deletePatient(id) {
       })
       
       .catch(console.log);
-      document.location.reload();
+      //document.location.reload();
   }
 
 class Patients extends React.Component {
     constructor() {
       super()
-      this.state = { patients: [] }
+      this.state = { 
+        patients: [] }
     }
   
 
     componentDidMount() {
-        fetch('https://localhost:44399/api/patient')
+     authProvider.getAccessToken().then(res => 
+        fetch('https://localhost:44399/api/patient',
+        {
+          method: "GET",
+          headers: 
+          { 
+            'Authorization': `Bearer ${res.accessToken}`, 
+            'Accept': 'application/json',
+           }
+        }
+        ))
         .then(res => res.json())
         .then((data) => {
           this.setState({ patients: data })
@@ -55,7 +85,7 @@ class Patients extends React.Component {
         <Route
           path="/patients"
           exact
-          render={() => (
+          render= {() => (
             <div>
               <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
