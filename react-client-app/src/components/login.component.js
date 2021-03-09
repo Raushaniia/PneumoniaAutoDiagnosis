@@ -14,7 +14,8 @@ export default class Login extends Component {
               path="/sign-in"
               exact
               render={(props) => (
-                <div>
+                <div className="auth-wrapper">
+                <div className="auth-inner">
             <form>
                 <h3>Sign In</h3>
                
@@ -43,6 +44,7 @@ export default class Login extends Component {
                     Already registered <a href="#">sign in?</a>
                 </p>
             </form>
+            </div>
             </div>
           )}
         />

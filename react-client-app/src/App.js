@@ -30,8 +30,7 @@ class App extends Component {
                 </li>
               </ul>
         </nav>
-        <div className="auth-wrapper">
-          <div className="auth-inner">
+        <div id="fon"></div>
             <Switch>
               <Route exact path='/' component={SignUp} />
               <Route path="/sign-in" component={Login} />
@@ -40,8 +39,6 @@ class App extends Component {
               <Route path="/add-patient" component={PatientCard} />
               <Route path="/update-patient" component={PatientCardUpdate} />
             </Switch>
-          </div>
-        </div>
       </div></Router>
     );
   }

@@ -7,9 +7,12 @@ body{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 html{
   width: 100%;
   margin:0;
+  /*background:url(https://bekhterev.ru/wp-content/themes/bekhterev/resources/images/narcology_head.png) ; */
+  
 }
 .container {
   padding: 1em;

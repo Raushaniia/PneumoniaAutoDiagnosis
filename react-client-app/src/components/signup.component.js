@@ -11,7 +11,8 @@ class SignUp extends Component {
               path="/sign-up"
               exact
               render={(props) => (
-                <div>
+                <div className="auth-wrapper">
+                <div className="auth-inner">
             <form>
                 <h3>Sign Up</h3>
                 <div className="form-group">
@@ -49,6 +50,7 @@ class SignUp extends Component {
                     Already registered <a href="#">sign in?</a>
                 </p>
             </form>
+            </div>
             </div>
           )}
         />
