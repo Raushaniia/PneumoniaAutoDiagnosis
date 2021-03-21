@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Work\\PneumoniaAutoDiagnosis\\PneumoniaAutoDiagnosis\\PneumoniaAutoDiagnosis\\PneumoniaAutoDiagnosis.csproj": {}
+    "D:\\PneumoniaAutoDiagnosis\\PneumoniaAutoDiagnosis\\PneumoniaAutoDiagnosis\\PneumoniaAutoDiagnosis.csproj": {}
   },
   "projects": {
-    "C:\\Work\\PneumoniaAutoDiagnosis\\PneumoniaAutoDiagnosis\\PneumoniaAutoDiagnosis\\PneumoniaAutoDiagnosis.csproj": {
+    "D:\\PneumoniaAutoDiagnosis\\PneumoniaAutoDiagnosis\\PneumoniaAutoDiagnosis\\PneumoniaAutoDiagnosis.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Work\\PneumoniaAutoDiagnosis\\PneumoniaAutoDiagnosis\\PneumoniaAutoDiagnosis\\PneumoniaAutoDiagnosis.csproj",
+        "projectUniqueName": "D:\\PneumoniaAutoDiagnosis\\PneumoniaAutoDiagnosis\\PneumoniaAutoDiagnosis\\PneumoniaAutoDiagnosis.csproj",
         "projectName": "PneumoniaAutoDiagnosis",
-        "projectPath": "C:\\Work\\PneumoniaAutoDiagnosis\\PneumoniaAutoDiagnosis\\PneumoniaAutoDiagnosis\\PneumoniaAutoDiagnosis.csproj",
-        "packagesPath": "C:\\Users\\Raushaniia\\.nuget\\packages\\",
-        "outputPath": "C:\\Work\\PneumoniaAutoDiagnosis\\PneumoniaAutoDiagnosis\\PneumoniaAutoDiagnosis\\obj\\",
+        "projectPath": "D:\\PneumoniaAutoDiagnosis\\PneumoniaAutoDiagnosis\\PneumoniaAutoDiagnosis\\PneumoniaAutoDiagnosis.csproj",
+        "packagesPath": "C:\\Users\\Akvelon\\.nuget\\packages\\",
+        "outputPath": "D:\\PneumoniaAutoDiagnosis\\PneumoniaAutoDiagnosis\\PneumoniaAutoDiagnosis\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Raushaniia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Akvelon\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -82,7 +79,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }

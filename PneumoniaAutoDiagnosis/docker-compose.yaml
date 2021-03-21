@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pad-server-test
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pad-server-test
+  template:
+    metadata:
+      labels:
+        app: pad-server-test
+    spec:
+      nodeSelector:
+        "beta.kubernetes.io/os": windows
+      containers:
+      - name: pad-server-new
+        image: docker.io/rushaniia/pad-server-test
+        env:
+        - name: ALLOW_EMPTY_PASSWORD
+          value: "yes"
+        resources:
+          requests:
+            cpu: 100m
+            memory: 128Mi
+          limits:
+            cpu: 250m
+            memory: 256Mi
+        ports:
+        - containerPort: 44399
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: pad-server-test
+spec:
+  ports:
+  - port: 44399
+  selector:
+    app: pad-server-test

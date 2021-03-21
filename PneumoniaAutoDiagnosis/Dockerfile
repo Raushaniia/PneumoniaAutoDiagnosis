@@ -10,7 +10,7 @@ RUN dotnet restore
 # copy everything else and build app
 COPY PneumoniaAutoDiagnosis/. ./PneumoniaAutoDiagnosis/
 WORKDIR /source/PneumoniaAutoDiagnosis
-RUN dotnet publish -c release -o /app --no-restore
+RUN dotnet publish -c release -o /app --restore
 
 # final stage/image
 FROM mcr.microsoft.com/dotnet/aspnet:5.0

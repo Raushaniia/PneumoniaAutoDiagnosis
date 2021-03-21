@@ -1,34 +1,33 @@
-kind: Deployment
 apiVersion: apps/v1
+kind: Deployment
 metadata:
-  name: react-client-app
+  name: react-client-app-1
+  namespace: default
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
-      app: react-client-app
+      app: react-client-app-1
   template:
     metadata:
       labels:
-        app: react-client-app
+        app: react-client-app-1
     spec:
       containers:
         - name: react-client-app
           image: docker.io/rushaniia/react-client-app
           imagePullPolicy: Always
           ports:
-            - containerPort: 80
+            - containerPort: 3000
       restartPolicy: Always
+---
 kind: Service
 apiVersion: v1
 metadata:
-  name: react-client-app
+  name: react-client-app-1
 spec:
-  type: NodePort
+  type: LoadBalancer
   ports:
     - port: 3000
-      targetPort: 80
-      protocol: TCP
-      nodePort: 31000
   selector:
-    app: react-client-app
+    app: react-client-app-1

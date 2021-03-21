@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace PneumoniaAutoDiagnosis.Controllers
 {
-	[Authorize]
+	//[Authorize]
     [Route("api/[controller]")]
 	[ApiController]
 	public class PatientController : ControllerBase
