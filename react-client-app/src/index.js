@@ -2,13 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.css';
-import { BrowserRouter } from "react-router-dom";
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { authProvider } from "./auth/authProvider";
 import { AzureAD } from 'react-aad-msal';
-import { Provider } from 'react-redux';
-import { Logger, LogLevel } from "msal";
+
 
 ReactDOM.render(
   <AzureAD provider={authProvider} forceLogin={true}>

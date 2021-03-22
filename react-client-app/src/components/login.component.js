@@ -58,7 +58,7 @@ function logInUser(email, password) {
       Email: email,
       Password: password   
     };
-    fetch("https://localhost:44399/api/user/", {
+    fetch("https://pneumoniaautodiagnosis20210322205459.azurewebsites.net/api/user/", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

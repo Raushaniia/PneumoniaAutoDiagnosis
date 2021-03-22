@@ -2,8 +2,6 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import PatientCard from "./patient-card";
 import PatientCardUpdate from "./patient-card-update";
-import { useHistory } from "react-router-dom"; 
-import {createAuthProvider} from 'react-token-auth';
 import { authProvider } from "./../auth/authProvider";
 
 
@@ -25,21 +23,15 @@ function setPatient(id, name, date, status) {
 
 function deletePatient(id) {
   authProvider.getAccessToken().then(res => 
-    //console.log(res.accessToken))
-    fetch("https://localhost:44399/api/patient/" + id,
+    fetch("https://pneumoniaautodiagnosis20210322205459.azurewebsites.net/api/patient/" + id,
     {
       method: "DELETE",
       headers: 
       { 
-        'Authorization': `Bearer ${res.accessToken}`, 
-        //'Accept': 'application/json',
+        'Authorization': `Bearer ${res.accessToken}`
        }
     }
     ))
-    /*fetch("https://localhost:44399/api/patient/" + id, 
-    { 
-      method: "DELETE" 
-    })*/
       .then((res) => res.json())
       .then((data) => {
         this.setState({
@@ -48,7 +40,6 @@ function deletePatient(id) {
       })
       
       .catch(console.log);
-      //document.location.reload();
   }
 
 class Patients extends React.Component {
@@ -61,7 +52,7 @@ class Patients extends React.Component {
 
     componentDidMount() {
      authProvider.getAccessToken().then(res => 
-        fetch('https://localhost:44399/api/patient',
+        fetch('https://pneumoniaautodiagnosis20210322205459.azurewebsites.net/api/patient',//'https://localhost:44399/api/patient',
         {
           method: "GET",
           headers: 

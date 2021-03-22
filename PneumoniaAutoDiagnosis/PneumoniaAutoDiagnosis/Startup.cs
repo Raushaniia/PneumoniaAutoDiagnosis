@@ -14,7 +14,7 @@ using Microsoft.Extensions.Options;
 using Microsoft.Identity.Web;
 using PneumoniaAutoDiagnosis.DAL;
 using PneumoniaAutoDiagnosis.Services;
-
+using System.Threading.Tasks;
 
 namespace PneumoniaAutoDiagnosis
 {
@@ -32,17 +32,17 @@ namespace PneumoniaAutoDiagnosis
 		// For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
 		public void ConfigureServices(IServiceCollection services)
 		{
-            //services.AddAuthentication(options =>
-            //{
-            //    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-            //    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
 
-            //}).AddJwtBearer(options =>
-            //{
-            //    options.Authority = "https://login.microsoftonline.com/e9e18706-7eba-446b-a3df-e1bde79cf7c0/v2.0";
-            //    //options.RequireHttpsMetadata = false;
-            //    options.Audience = "bdedf839-fb9e-4276-8f4d-6608468c1fa6";
-            //});
+            }).AddJwtBearer(options =>
+            {
+                options.Authority = "https://login.microsoftonline.com/e9e18706-7eba-446b-a3df-e1bde79cf7c0/v2.0";
+                options.RequireHttpsMetadata = false;
+                options.Audience = "bdedf839-fb9e-4276-8f4d-6608468c1fa6";
+            });
 
             services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
 			{
@@ -50,6 +50,8 @@ namespace PneumoniaAutoDiagnosis
 					.AllowAnyMethod()
 					.AllowAnyHeader();
 			}));
+
+			services.AddSingleton<ICosmosDbService>(InitializeCosmosClientInstanceAsync(Configuration.GetSection("CosmosDb")).GetAwaiter().GetResult());
 
 			services.Configure<DiagnosesDbDatabaseSettings>(
 				Configuration.GetSection(nameof(DiagnosesDbDatabaseSettings)));
@@ -88,6 +90,20 @@ namespace PneumoniaAutoDiagnosis
 			{
 				endpoints.MapControllers();
 			});
+		}
+
+		private static async Task<CosmosDbService> InitializeCosmosClientInstanceAsync(IConfigurationSection configurationSection)
+		{
+			string databaseName = configurationSection.GetSection("DatabaseName").Value;
+			string containerName = configurationSection.GetSection("ContainerName").Value;
+			string account = configurationSection.GetSection("Account").Value;
+			string key = configurationSection.GetSection("Key").Value;
+			Microsoft.Azure.Cosmos.CosmosClient client = new Microsoft.Azure.Cosmos.CosmosClient(account, key);
+			CosmosDbService cosmosDbService = new CosmosDbService(client, databaseName, containerName);
+			Microsoft.Azure.Cosmos.DatabaseResponse database = await client.CreateDatabaseIfNotExistsAsync(databaseName);
+			await database.Database.CreateContainerIfNotExistsAsync(containerName, "/Id");
+
+			return cosmosDbService;
 		}
 	}
 }

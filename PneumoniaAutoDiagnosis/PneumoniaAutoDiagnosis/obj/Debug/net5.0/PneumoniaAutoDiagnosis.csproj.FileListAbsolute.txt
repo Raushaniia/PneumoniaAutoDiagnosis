@@ -127,3 +127,13 @@ D:\PneumoniaAutoDiagnosis\PneumoniaAutoDiagnosis\PneumoniaAutoDiagnosis\obj\Debu
 D:\PneumoniaAutoDiagnosis\PneumoniaAutoDiagnosis\PneumoniaAutoDiagnosis\obj\Debug\net5.0\PneumoniaAutoDiagnosis.pdb
 D:\PneumoniaAutoDiagnosis\PneumoniaAutoDiagnosis\PneumoniaAutoDiagnosis\obj\Debug\net5.0\PneumoniaAutoDiagnosis.genruntimeconfig.cache
 D:\PneumoniaAutoDiagnosis\PneumoniaAutoDiagnosis\PneumoniaAutoDiagnosis\bin\Debug\net5.0\web.config
+D:\PneumoniaAutoDiagnosis\PneumoniaAutoDiagnosis\PneumoniaAutoDiagnosis\bin\Debug\net5.0\Microsoft.Azure.Cosmos.ServiceInterop.dll
+D:\PneumoniaAutoDiagnosis\PneumoniaAutoDiagnosis\PneumoniaAutoDiagnosis\bin\Debug\net5.0\Cosmos.CRTCompat.dll
+D:\PneumoniaAutoDiagnosis\PneumoniaAutoDiagnosis\PneumoniaAutoDiagnosis\bin\Debug\net5.0\Microsoft.Azure.Cosmos.Client.dll
+D:\PneumoniaAutoDiagnosis\PneumoniaAutoDiagnosis\PneumoniaAutoDiagnosis\bin\Debug\net5.0\Microsoft.Azure.Cosmos.Core.dll
+D:\PneumoniaAutoDiagnosis\PneumoniaAutoDiagnosis\PneumoniaAutoDiagnosis\bin\Debug\net5.0\Microsoft.Azure.Cosmos.Direct.dll
+D:\PneumoniaAutoDiagnosis\PneumoniaAutoDiagnosis\PneumoniaAutoDiagnosis\bin\Debug\net5.0\Microsoft.Azure.Cosmos.Serialization.HybridRow.dll
+D:\PneumoniaAutoDiagnosis\PneumoniaAutoDiagnosis\PneumoniaAutoDiagnosis\bin\Debug\net5.0\Microsoft.Bcl.HashCode.dll
+D:\PneumoniaAutoDiagnosis\PneumoniaAutoDiagnosis\PneumoniaAutoDiagnosis\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
+D:\PneumoniaAutoDiagnosis\PneumoniaAutoDiagnosis\PneumoniaAutoDiagnosis\bin\Debug\net5.0\runtimes\win-x64\native\Cosmos.CRTCompat.dll
+D:\PneumoniaAutoDiagnosis\PneumoniaAutoDiagnosis\PneumoniaAutoDiagnosis\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Azure.Cosmos.ServiceInterop.dll

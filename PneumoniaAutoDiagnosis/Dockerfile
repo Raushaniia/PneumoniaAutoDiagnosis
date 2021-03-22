@@ -1,4 +1,6 @@
 # https://hub.docker.com/_/microsoft-dotnet
+# FROM mcr.microsoft.com/windows/servercore:1809
+
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /source
 
@@ -13,7 +15,7 @@ WORKDIR /source/PneumoniaAutoDiagnosis
 RUN dotnet publish -c release -o /app --restore
 
 # final stage/image
-FROM mcr.microsoft.com/dotnet/aspnet:5.0
+FROM mcr.microsoft.com/windows/servercore:1809
 WORKDIR /app
 COPY --from=build /app ./
 ENTRYPOINT ["dotnet", "PneumoniaAutoDiagnosis.dll"]

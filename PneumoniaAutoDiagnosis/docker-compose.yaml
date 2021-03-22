@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pad-server-test
+  name: pad-server-with-os
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: pad-server-test
+      app: pad-server-with-os
   template:
     metadata:
       labels:
-        app: pad-server-test
+        app: pad-server-with-os
     spec:
       nodeSelector:
         "beta.kubernetes.io/os": windows
       containers:
-      - name: pad-server-new
-        image: docker.io/rushaniia/pad-server-test
+      - name: pad-server-with-os
+        image: docker.io/rushaniia/pad-server-with-os-17-1
         env:
         - name: ALLOW_EMPTY_PASSWORD
           value: "yes"
@@ -33,9 +33,9 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: pad-server-test
+  name: pad-server-with-os
 spec:
   ports:
   - port: 44399
   selector:
-    app: pad-server-test
+    app: pad-server-with-os

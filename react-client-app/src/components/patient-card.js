@@ -113,7 +113,7 @@ function addPatient(newName, newDateOfBirh, status) {
   };
   var d = authProvider.getAccessToken().catch(console.log);
   authProvider.getAccessToken().then(res => 
-    fetch("https://localhost:44399/api/patient/" ,
+    fetch("https://pneumoniaautodiagnosis20210322205459.azurewebsites.net/api/patient/" ,
     {
       method: "POST",
       headers: 

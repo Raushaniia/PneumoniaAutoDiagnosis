@@ -4,7 +4,7 @@ const config = {
   auth: {
     authority: 'https://login.microsoftonline.com/e9e18706-7eba-446b-a3df-e1bde79cf7c0',
     clientId: 'bdedf839-fb9e-4276-8f4d-6608468c1fa6',
-    //redirectUri: 'http://localhost:3000/patients'
+    redirectUri: 'https://pneumoniaautodiagnosis20210322205459.azurewebsites.net/api/patient'
   },
   cache: {
     cacheLocation: "localStorage",
@@ -17,7 +17,8 @@ const authenticationParameters = {
   scopes: [
     'openid',
     'offline_access' ,
-    'https://domainpad.onmicrosoft.com/bdedf839-fb9e-4276-8f4d-6608468c1fa6/Pad.read'
+    'https://domainpad.onmicrosoft.com/bdedf839-fb9e-4276-8f4d-6608468c1fa6/Pad.read',
+    'https://domainpad.onmicrosoft.com/bdedf839-fb9e-4276-8f4d-6608468c1fa6/Pad.write'
   ]
 }
 

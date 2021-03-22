@@ -120,7 +120,7 @@ function updatePatient(id, newName, newDateOfBirh, status) {
   };
 
   authProvider.getAccessToken().then(res => 
-    fetch("https://localhost:44399/api/patient/" + id, 
+    fetch("https://pneumoniaautodiagnosis20210322205459.azurewebsites.net/api/patient/" + id, 
     {
       method: "PUT",
       body: JSON.stringify(patient),
