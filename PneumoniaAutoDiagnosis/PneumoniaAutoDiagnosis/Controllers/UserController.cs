@@ -2,10 +2,11 @@
 using PneumoniaAutoDiagnosis.Models;
 using PneumoniaAutoDiagnosis.Services;
 using System.Collections.Generic;
-using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authorization;
 
 namespace PneumoniaAutoDiagnosis.Controllers
 {
+	[Authorize]
 	[Route("api/[controller]")]
 	[ApiController]
 	public class UserController : ControllerBase

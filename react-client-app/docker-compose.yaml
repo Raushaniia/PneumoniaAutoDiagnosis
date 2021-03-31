@@ -1,17 +1,17 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: react-client-app-1
+  name: react-client-app
   namespace: default
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: react-client-app-1
+      app: react-client-app
   template:
     metadata:
       labels:
-        app: react-client-app-1
+        app: react-client-app
     spec:
       containers:
         - name: react-client-app
@@ -24,10 +24,10 @@ spec:
 kind: Service
 apiVersion: v1
 metadata:
-  name: react-client-app-1
+  name: react-client-app
 spec:
   type: LoadBalancer
   ports:
     - port: 3000
   selector:
-    app: react-client-app-1
+    app: react-client-app

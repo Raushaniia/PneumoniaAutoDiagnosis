@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { authProvider } from "./../auth/authProvider";
+import * as Constants from './../appsettings';
+
 const ReactDOM = require('react-dom');
 const Route = require('react-router-dom').Route;
 const BrowserRouter = require('react-router-dom').BrowserRouter;
@@ -67,7 +69,7 @@ class PatientCard extends Component {
                     type="text"
                     class="form-control"
                     id="inputDate"
-                    placeholder="2019-01-31T10:00:00.000Z"
+                    placeholder="01/31/2000"
                   />
                 </div>
                 <div class="col-9">
@@ -113,7 +115,7 @@ function addPatient(newName, newDateOfBirh, status) {
   };
   var d = authProvider.getAccessToken().catch(console.log);
   authProvider.getAccessToken().then(res => 
-    fetch("https://pneumoniaautodiagnosis20210322205459.azurewebsites.net/api/patient/" ,
+    fetch(Constants.url +"api/patient/",
     {
       method: "POST",
       headers: 
@@ -124,7 +126,6 @@ function addPatient(newName, newDateOfBirh, status) {
        body: JSON.stringify(patient),
     }
     ))
-    
     .catch(console.log);
 
 }

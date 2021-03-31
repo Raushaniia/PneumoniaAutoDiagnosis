@@ -15,7 +15,7 @@ WORKDIR /source/PneumoniaAutoDiagnosis
 RUN dotnet publish -c release -o /app --restore
 
 # final stage/image
-FROM mcr.microsoft.com/windows/servercore:1809
+FROM mcr.microsoft.com/dotnet/aspnet:5.0
 WORKDIR /app
 COPY --from=build /app ./
 ENTRYPOINT ["dotnet", "PneumoniaAutoDiagnosis.dll"]

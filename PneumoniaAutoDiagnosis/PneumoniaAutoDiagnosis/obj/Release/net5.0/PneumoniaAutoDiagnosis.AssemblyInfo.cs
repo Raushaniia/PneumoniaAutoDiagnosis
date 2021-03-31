@@ -11,6 +11,7 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("6c0a4a29-225b-43c7-814e-0c5707892425")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("PneumoniaAutoDiagnosis")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]

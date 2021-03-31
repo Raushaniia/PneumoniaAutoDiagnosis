@@ -6,20 +6,23 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace PneumoniaAutoDiagnosis.Controllers
 {
-	[Authorize]
+    [Authorize]
     [Route("api/[controller]")]
-	[ApiController]
-	public class PatientController : ControllerBase
-	{
-		private readonly PatientService _patientService;
+    [ApiController]
+    public class PatientController : ControllerBase
+    {
+        private readonly PatientService _patientService;
 
-		public PatientController(PatientService patientService)
-		{
-			_patientService = patientService;
-		}
+        public PatientController(PatientService patientService)
+        {
+            _patientService = patientService;
+        }
 
         [HttpGet(Name = "Get")]
-        public ActionResult<List<Patient>> Get() => _patientService.Get();
+        public ActionResult<List<Patient>> Get()
+        {
+            return _patientService.Get();
+        }
 
         [HttpGet("{id:length(24)}", Name = "GetPatient")]
         public ActionResult<Patient> Get(string id)

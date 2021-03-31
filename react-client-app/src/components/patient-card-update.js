@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { authProvider } from "./../auth/authProvider";
+import * as Constants from './../appsettings';
+
 const ReactDOM = require("react-dom");
 const Route = require("react-router-dom").Route;
 const BrowserRouter = require("react-router-dom").BrowserRouter;
@@ -70,7 +72,7 @@ class PatientCardUpdate extends Component {
                     defaultValue={this.props.date}
                     class="form-control"
                     id="inputDate"
-                    placeholder="2019-01-31T10:00:00.000Z"
+                    placeholder="01/31/2000"
                   />
                 </div>
                 <div class="col-9">
@@ -120,7 +122,7 @@ function updatePatient(id, newName, newDateOfBirh, status) {
   };
 
   authProvider.getAccessToken().then(res => 
-    fetch("https://pneumoniaautodiagnosis20210322205459.azurewebsites.net/api/patient/" + id, 
+    fetch(Constants.url + "api/patient" + id, 
     {
       method: "PUT",
       body: JSON.stringify(patient),

@@ -1,0 +1,1 @@
+export const url = "https://pneumoniaautodiagnosis20210327215059.azurewebsites.net/";

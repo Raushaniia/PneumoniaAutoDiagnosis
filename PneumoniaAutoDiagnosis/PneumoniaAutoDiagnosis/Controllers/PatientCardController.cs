@@ -1,10 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 using PneumoniaAutoDiagnosis.Models;
 using PneumoniaAutoDiagnosis.Services;
 using System.Collections.Generic;
 
 namespace PneumoniaAutoDiagnosis.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class PatientCardController : ControllerBase

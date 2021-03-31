@@ -19,18 +19,16 @@ namespace PneumoniaAutoDiagnosis.Services
 
 		public List<User> Get() => _users.Find(p => true).ToList();
 		public User Get(string userId) => _users.Find(u => u.Id == userId).FirstOrDefault();
-		
 		public async void CreateAsync(User user)
 		{
 			_users.InsertOne(user);
-			//var newUser = new IdentityUser { UserName = user.Email, Email = user.Email };
-			//var result = await _userManager.CreateAsync(newUser, user.Password);
-
 		}
+
 		public void Delete(string userId)
 		{
 			_users.DeleteOne(u => u.Id == userId);
 		}
+
 		public void Update(string id, User userUpdated) => _users.ReplaceOne(p => p.Id == id, userUpdated);
 	}
 }

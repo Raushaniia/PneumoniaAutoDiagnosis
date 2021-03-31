@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
     <OutputType>Exe</OutputType>
+    <UserSecretsId>6c0a4a29-225b-43c7-814e-0c5707892425</UserSecretsId>
   </PropertyGroup>
  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Authentication.AzureAD.UI" Version="5.0.3" />
