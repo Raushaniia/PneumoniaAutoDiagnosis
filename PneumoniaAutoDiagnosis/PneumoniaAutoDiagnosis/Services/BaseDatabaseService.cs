@@ -8,6 +8,7 @@ namespace PneumoniaAutoDiagnosis.Services
 		public IMongoDatabase Database; 
 		public BaseDatabaseService(IDiagnosesDbDatabaseSettings settings)
 		{
+			// test commit 
 			var client = new MongoClient(settings.ConnectionString);
 			Database = client.GetDatabase(settings.DatabaseName);
 		}

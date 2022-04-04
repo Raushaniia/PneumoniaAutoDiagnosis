@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\PneumoniaAutoDiagnosis\\PneumoniaAutoDiagnosis\\PneumoniaAutoDiagnosis\\PneumoniaAutoDiagnosis.csproj": {}
+    "C:\\Users\\Akvelon0480\\source\\repos\\PneumoniaAutoDiagnosis\\PneumoniaAutoDiagnosis\\PneumoniaAutoDiagnosis\\PneumoniaAutoDiagnosis.csproj": {}
   },
   "projects": {
-    "D:\\PneumoniaAutoDiagnosis\\PneumoniaAutoDiagnosis\\PneumoniaAutoDiagnosis\\PneumoniaAutoDiagnosis.csproj": {
+    "C:\\Users\\Akvelon0480\\source\\repos\\PneumoniaAutoDiagnosis\\PneumoniaAutoDiagnosis\\PneumoniaAutoDiagnosis\\PneumoniaAutoDiagnosis.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PneumoniaAutoDiagnosis\\PneumoniaAutoDiagnosis\\PneumoniaAutoDiagnosis\\PneumoniaAutoDiagnosis.csproj",
+        "projectUniqueName": "C:\\Users\\Akvelon0480\\source\\repos\\PneumoniaAutoDiagnosis\\PneumoniaAutoDiagnosis\\PneumoniaAutoDiagnosis\\PneumoniaAutoDiagnosis.csproj",
         "projectName": "PneumoniaAutoDiagnosis",
-        "projectPath": "D:\\PneumoniaAutoDiagnosis\\PneumoniaAutoDiagnosis\\PneumoniaAutoDiagnosis\\PneumoniaAutoDiagnosis.csproj",
-        "packagesPath": "C:\\Users\\Akvelon\\.nuget\\packages\\",
-        "outputPath": "D:\\PneumoniaAutoDiagnosis\\PneumoniaAutoDiagnosis\\PneumoniaAutoDiagnosis\\obj\\",
+        "projectPath": "C:\\Users\\Akvelon0480\\source\\repos\\PneumoniaAutoDiagnosis\\PneumoniaAutoDiagnosis\\PneumoniaAutoDiagnosis\\PneumoniaAutoDiagnosis.csproj",
+        "packagesPath": "C:\\Users\\Akvelon0480\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Akvelon0480\\source\\repos\\PneumoniaAutoDiagnosis\\PneumoniaAutoDiagnosis\\PneumoniaAutoDiagnosis\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Akvelon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Akvelon0480\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -83,7 +83,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
